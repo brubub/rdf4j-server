@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: rdf4j-server
+
+rdf4j:
+  protocol:
+    version: 12

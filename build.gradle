@@ -1,0 +1,42 @@
+plugins {
+	id "java"
+	id "org.springframework.boot" version "3.5.9"
+	id "io.spring.dependency-management" version "1.1.7"
+}
+
+group = "edu.brunobudris"
+version = "0.0.1"
+description = "RDF4J Server implementing RDF4J REST API"
+
+def rdf4jVersion = "5.2.2"
+def lombokVersion = "1.18.42"
+def commonsTextVersion = "1.15.0"
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(21)
+	}
+}
+
+repositories {
+	mavenCentral()
+	mavenLocal()
+}
+
+dependencies {
+	compileOnly "org.projectlombok:lombok:$lombokVersion"
+	annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+	implementation "org.springframework.boot:spring-boot-starter"
+	implementation "org.springframework.boot:spring-boot-starter-web"
+	implementation "org.eclipse.rdf4j:rdf4j-storage:$rdf4jVersion"
+	implementation "org.apache.commons:commons-text:$commonsTextVersion"
+
+	testImplementation "org.springframework.boot:spring-boot-starter-test"
+
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+tasks.named("test") {
+	useJUnitPlatform()
+}

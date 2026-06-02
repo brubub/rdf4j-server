@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="RDF4JServer" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="edu.brunobudris.ke.rdf4j_server.Application" />
+    <module name="rdf4j-server" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="edu.brunobudris.ke.rdf4j_server.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

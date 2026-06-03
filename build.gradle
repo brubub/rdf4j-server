@@ -18,6 +18,14 @@ java {
 	}
 }
 
+jar {
+	archiveFileName = "${archiveBaseName.get()}.jar"
+}
+
+bootJar {
+	archiveFileName = "${archiveBaseName.get()}.jar"
+}
+
 repositories {
 	mavenCentral()
 	mavenLocal()
